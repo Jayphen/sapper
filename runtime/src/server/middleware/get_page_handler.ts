@@ -190,7 +190,7 @@ export function get_page_handler(
 
 			match = error ? null : page.pattern.exec(req.path);
 
-			lang = root_preloaded['lang'] || lang;
+			lang = session['lang'] || lang;
 
 			let toPreload: PreloadResult[] = [root_preloaded];
 			if (!is_service_worker_index) {
